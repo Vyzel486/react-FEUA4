@@ -25,7 +25,7 @@ const divStyle = {
 function Card(props) {
   return (
     <div style={divStyle}>
-      <img style={imgStyle} src={props.ImageUrl} alt="" />
+      <img style={imgStyle} src={props.ImageUrl} alt={props.title} />
       <h2 style={hStyle}>{props.title}</h2>
       <p style={pStyle}>{props.subtitle}</p>
     </div>

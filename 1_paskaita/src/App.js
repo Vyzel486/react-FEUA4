@@ -8,6 +8,8 @@ import ClassDiv from "./components/ClassDiv";
 import Greeting from "./components/Greeting";
 import Card from "./components/Card";
 import Avatar from "./components/Avatar";
+import Product from "./components/Product";
+import Products from "./components/Products";
 
 // apibrėžiam komponento pavadinimą, visada didžioji raidė.
 // geroji praktika: Failo pavadinimas toks pat kaip komponento pavadinimas
@@ -54,6 +56,9 @@ function App() {
         <Avatar name="Raimondas matuliauskas" />
         <Avatar name="diana Kristinaviciute" />
         <Avatar name="paulius mikutavicius" />
+      </div>
+      <div>
+        <Products />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import FuncButton from "./FuncButton";
+import FuncButton from './FuncButton';
 import PropTypes from 'prop-types'
 
 function FuncDiv(props) {
@@ -6,7 +6,7 @@ function FuncDiv(props) {
   <div>
     <h3>Pirmas dublis</h3>
     <p>cia bus tekstas</p>
-    <FuncButton {...props.title}/>
+    <FuncButton title="Click ME" />
   </div>
   );
 }

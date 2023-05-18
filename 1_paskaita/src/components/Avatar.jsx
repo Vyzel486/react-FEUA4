@@ -7,7 +7,11 @@ const divStyle = {
     background: randomColor,
     padding: '10px',
     margin: '10px',
-    float: 'left',
+    width: '36px',
+    height: '36px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
 }
 
 const Avatar = (props) => {
