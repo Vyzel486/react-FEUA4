@@ -8,7 +8,6 @@ import ClassDiv from "./components/ClassDiv";
 import Greeting from "./components/Greeting";
 import Card from "./components/Card";
 import Avatar from "./components/Avatar";
-import Product from "./components/Product";
 import Products from "./components/Products";
 
 // apibrėžiam komponento pavadinimą, visada didžioji raidė.
