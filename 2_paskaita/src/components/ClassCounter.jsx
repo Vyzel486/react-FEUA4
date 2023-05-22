@@ -16,14 +16,14 @@ class ClassCounter extends Component {
   }
 
   increase = () => {
-    this.setState(previouseState => ({
-      count: previouseState.count + 1
+    this.setState(previousState => ({
+      count: previousState.count + 1
     }));
   }
 
   decrease = () => {
-    this.setState(previouseState => ({
-      count: previouseState.count - 1
+    this.setState(previousState => ({
+      count: previousState.count - 1
     }));
   }
 

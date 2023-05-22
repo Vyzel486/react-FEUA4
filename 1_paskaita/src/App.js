@@ -9,19 +9,28 @@ import Greeting from "./components/Greeting";
 import Card from "./components/Card";
 import Avatar from "./components/Avatar";
 import Products from "./components/Products";
+import Welcome from "./components/Welcome";
+import { useState } from "react";
 
 // apibrėžiam komponento pavadinimą, visada didžioji raidė.
 // geroji praktika: Failo pavadinimas toks pat kaip komponento pavadinimas
 function App() {
-  const name = "Rokas";
-  function getName() {
-    return "Tadas";
-  }
-  const getSurname = () => "Raimis";
-  const surname = getSurname();
+  // const name = "Rokas";
+  // function getName() {
+  //   return "Tadas";
+  // }
+  // const getSurname = () => "Raimis";
+  // const surname = getSurname();
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setLoggedIn((previousValue) => !previousValue);
+  };
+
   return (
     <div>
-      <div>
+      {/* <div>
         <h1>Mamutas</h1>
         <h2>{name}</h2>
         <h2>{getName()}</h2>
@@ -55,9 +64,13 @@ function App() {
         <Avatar name="Raimondas matuliauskas" />
         <Avatar name="diana Kristinaviciute" />
         <Avatar name="paulius mikutavicius" />
-      </div>
+      </div> */}
       <div>
         <Products />
+      </div>
+      <div>
+        <Welcome isLoggedIn={loggedIn} />
+        <button onClick={handleLogin}>{loggedIn ? "Log out" : "Log in"}</button>
       </div>
     </div>
   );
