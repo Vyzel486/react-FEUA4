@@ -28,9 +28,9 @@ function WeightCalculator() {
             />
             <button onClick={convert}>Convert</button>
 
-            {tons > 0 && <p>Tons: {tons}</p>}
-            {grams > 0 && <p>Grams: {grams}</p>}
-            {pounds > 0 && <p>Pounds: {pounds}</p>}
+            {tons > 0 && <p>Tons: <strong>{tons}</strong> t</p>}
+            {grams > 0 && <p>Grams: <strong>{grams}</strong> g</p>}
+            {pounds > 0 && <p>Pounds: <strong>{pounds}</strong> lb</p>}
         </div>
     )
 }

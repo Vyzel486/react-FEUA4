@@ -3,17 +3,20 @@ import "./Background.css";
 
 function Background() {
   const [text, setText] = useState('');
-  let backgroundColor = '';
 
-  if (text.length < 3) {
-    backgroundColor = 'white';
-  } else if (text.length < 6) {
-    backgroundColor = 'yellow';
-  } else if (text.length < 9) {
-    backgroundColor = 'green';
-  } else {
-    backgroundColor = 'red';
+  const getBackgroundColor = (textLength) => {
+    if (textLength < 3) {
+      return 'white';
+    } else if (textLength < 6) {
+      return 'yellow';
+    } else if (textLength < 9) {
+      return 'green';
+    } else {
+      return 'red';
+    }
   }
+
+  const backgroundColor = getBackgroundColor(text.length);
 
   return (
     <div className={backgroundColor}>
@@ -22,4 +25,4 @@ function Background() {
   );
 }
 
-export default Background
+export default Background;

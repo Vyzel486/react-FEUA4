@@ -2,7 +2,7 @@
 // import { useRef, useState } from "react";
 // import InputExample from "./InputExample";
 // import Input from "./components/Input";
-// import Background from "./components/Background/Background";
+import Background from "./components/Background/Background";
 import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
 
 const App = () => {
@@ -50,8 +50,12 @@ const App = () => {
       <br /> */}
       {/* <InputExample /> */}
       {/* <Input /> */}
-      {/* <Background /> */}
-      <WeightCalculator />
+      <div>
+        <Background /> 
+      </div>
+      <div>
+        <WeightCalculator />
+      </div>
     </div>
   );
 };
