@@ -5,7 +5,7 @@ function SecondCard() {
   return (
     <div className="secondCard">
         <img src={man} alt="" />
-        <p>Ipsum Feugiat</p>
+        <p>Rhoncus Semper</p>
     </div>
   )
 }
