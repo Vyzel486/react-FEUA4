@@ -3,7 +3,7 @@
 // import InputExample from "./InputExample";
 // import Input from "./components/Input";
 import Background from "./components/Background/Background";
-import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
+// import WeightCalculator from "./components/WeightCalculator/WeightCalculator";
 
 const App = () => {
   // sukuriam ref kintąmąjį
@@ -54,7 +54,7 @@ const App = () => {
         <Background /> 
       </div>
       <div>
-        <WeightCalculator />
+        {/* <WeightCalculator /> */}
       </div>
     </div>
   );

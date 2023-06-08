@@ -1,0 +1,23 @@
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(31, 123, 151, 0.351);
+    position: relative;
+}
+
+#search {
+  background-color: transparent;
+  padding: 7px;
+  border: none;
+  width: 200px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

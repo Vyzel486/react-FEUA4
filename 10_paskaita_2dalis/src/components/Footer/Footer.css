@@ -1,0 +1,25 @@
+.footer{
+    text-align: center;
+    padding: 8px 0;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul li{
+    list-style: none;
+    margin-left: 1.5rem;
+    padding: 8px 0;
+}
+
+.footer p{
+    padding-bottom: 8px;
+}
+
+.footer a{
+    font-family: "Shadows Into Light", cursive;
+    font-size: 1.3rem;
+}

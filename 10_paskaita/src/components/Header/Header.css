@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: rgba(248, 175, 81, 0.8);  
+}
+.logo{
+    width: 40px;
+}
+.header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header ul li{
+    list-style: none;
+    margin-left: 1.5rem;
+}

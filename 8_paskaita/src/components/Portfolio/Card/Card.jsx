@@ -1,11 +1,10 @@
 import "./Card.css";
-import sunflowers from '../Images/sunflowers.jpg'
 
-function Card() {
+const Card = ({image, title}) => {
   return (
     <div className="card">
-        <img src={sunflowers} alt="" />
-        <p>Ipsum Feugiat</p>
+        <img src={image} alt={title} />
+        <p>{title}</p>
     </div>
   )
 }

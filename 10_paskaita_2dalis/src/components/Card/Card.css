@@ -1,0 +1,23 @@
+.userCard{
+  background-image: url('./images/ski.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 150px;
+  padding: 8px;
+  box-shadow: 2px 2px 5px rgba(172, 166, 166, 0.644);
+  border-radius: 7px;
+}
+
+.userCard h2{
+  color: rgba(28, 117, 155, 0.884);
+}
+
+.userCard span{
+  color: rgba(230, 24, 24, 0.822);
+}
+
+.userCard p{
+  color: rgba(36, 180, 165, 0.884);
+  text-shadow: 2px 2px 8px rgb(125, 124, 124);
+}

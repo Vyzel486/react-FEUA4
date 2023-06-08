@@ -1,13 +1,15 @@
-// import Portfolio from "./components/Portfolio/Portfolio";
+import Portfolio from "./components/Portfolio/Portfolio";
 // import Shop from "./components/Shop/Shop";
-import Todos from "./components/Todos/Todos";
+// import Todos from "./components/Todos/Todos";
+// import TodosWithLocalStorage from "./components/Todos/TodosWithLocalStorage";
 
 const App = () => {
   return (
     <div>
-      {/* <Portfolio /> */}
+      <Portfolio />
       {/* <Shop /> */}
-      <Todos />
+      {/* <Todos /> */}
+      {/* <TodosWithLocalStorage /> */}
     </div>
   )
 }

@@ -1,0 +1,13 @@
+.image{
+    width: 400px;
+    float: left;
+    padding: 0 1rem;
+}
+.aboutTitle{
+    text-align: center;
+    text-transform: uppercase;
+}
+.aboutText{
+    text-align: justify;
+    padding: 0 1rem;
+}

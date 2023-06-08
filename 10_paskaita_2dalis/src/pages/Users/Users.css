@@ -1,0 +1,11 @@
+.users{
+    background-image: url("../../components/images/Mountain.jpeg");
+}
+
+.cards{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

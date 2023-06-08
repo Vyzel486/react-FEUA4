@@ -1,0 +1,13 @@
+.logout {
+  width: 520px;
+  height: 80px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.logoutButton {
+  padding: 5px;
+  width: 40%;
+}

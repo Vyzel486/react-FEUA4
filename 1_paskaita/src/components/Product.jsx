@@ -1,29 +1,29 @@
-import PropTypes from 'prop-types'
-import { useState } from 'react';
+import PropTypes from "prop-types";
+import { useState } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 const h2Style = {
-  color: 'grey',
-  fontSize: '1rem',
-}
+  color: "grey",
+  fontSize: "1rem",
+};
 
 const h1Style = {
-    fontSize: '1.5rem'
-}
+  fontSize: "1.5rem",
+};
 
 const divStyle = {
-  width: '350px',
-  margin: '10px'
-}
+  width: "350px",
+  margin: "10px",
+};
 
-function Product({category, name, price}) {
+function Product({ category, name, price }) {
   const [rate, setRate] = useState(0);
 
   return (
     <div style={divStyle}>
-        <h2 style={h2Style}>{name}</h2>
-        <h1 style={h1Style}>{category.toUpperCase()}</h1>
-        <div>
+      <h2 style={h2Style}>{name}</h2>
+      <h1 style={h1Style}>{category.toUpperCase()}</h1>
+      <div>
         {rate >= 1 ? (
           <FaStar
             onClick={() =>
@@ -61,8 +61,8 @@ function Product({category, name, price}) {
           <FaRegStar onClick={() => setRate(4)} />
         )}
         {rate >= 5 ? (
-          <FaStar 
-            onClick={() => 
+          <FaStar
+            onClick={() =>
               setRate((previousRate) => (previousRate === 5 ? 0 : 5))
             }
           />
@@ -70,8 +70,10 @@ function Product({category, name, price}) {
           <FaRegStar onClick={() => setRate(5)} />
         )}
       </div>
-        {/* {rate} - atvaizdavimas puslapyje*/}
-        <div><b>{price}</b></div>
+      {/* {rate} - atvaizdavimas puslapyje*/}
+      <div>
+        <b>{price}</b>
+      </div>
     </div>
   );
 }
@@ -80,6 +82,6 @@ Product.propTypes = {
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-}
+};
 
 export default Product;

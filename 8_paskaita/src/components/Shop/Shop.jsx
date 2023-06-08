@@ -1,48 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import "./Shop.css";
+// Fetchinsins duomenys su useEffect();
+// Kol neužsikrovė duomenys iš fetch - rodys "Loading.." tekstą (čia naudosim conditional rendering);
+// Kai pasikraus - duomenys bus išsaugoti useState ir iš ten - atsivaizduos puslapyje;
+// Paspaudus delete mygtuką - ištrinins įrašas (pasileis funkciją, kuri update'ins useState prafiltruodama array).
+import Product from "./Product";
+import { useState, useEffect } from "react";
+import "./Products.css";
 
-function Shop() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+const Products = () => {
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+  useEffect(() => {
+    setIsLoading(true);
 
-    const fetchData = async () => {
-        try {
-          const response = await fetch('https://golden-whispering-show.glitch.me');
-          const jsonData = await response.json();
-          setData(jsonData);
-          setLoading(false);
-        } catch (error) {
-          console.error(error);
-        }
-    };
+    fetch("https://golden-whispering-show.glitch.me")
+      .then((resp) => resp.json())
+      .then((response) => {
+        setIsLoading(false);
+        setProducts(response);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
-    const deleteButton = (id) => {
-        const updatedData = data.filter((item) => item.id !== id);
-        setData(updatedData);
-    };
+  const removeProduct = (id) => {
+    setProducts((prevProducts) =>
+      prevProducts.filter((item) => item.id !== id)
+    );
+  };
 
-    return (
-        <div>
-            {loading ? (
-                <p>Loading...</p>
-                ) : (
-                <ul>
-                  {data.map((item) => (
-                    <li key={item.id} className='card'>
-                        <img src={item.image} alt={item.title} />
-                        <p>{item.title}</p>
-                        <h2 className='price'>€{item.price}</h2>
-                        <button className='btn' onClick={() => deleteButton(item.id)}>Ištrinti</button>
-                    </li>
-                  ))}
-                </ul>
-            )}
-        </div>
-    )
-}
+  const deleteItem = (id) => {
+    fetch(`https://golden-whispering-show.glitch.me/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        removeProduct(id);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
-export default Shop
+  return (
+    <div className="container">
+      {isLoading && <p>Loading...</p>}
+      {!isLoading && products.length === 0 && <p>No products found..</p>}
+      {products.map((item) => (
+        <Product
+          key={item.id}
+          id={item.id}
+          image={item.image}
+          title={item.title}
+          price={item.price}
+          deleteItem={deleteItem}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default Products;

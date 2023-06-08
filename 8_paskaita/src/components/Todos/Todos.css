@@ -1,72 +1,51 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
-
-.container{
-    width: 500px;
-    box-shadow: 2px 2px 15px rgb(182, 181, 181);
-    padding: 1rem;
-}
-
-.container ul li{
-    list-style: none;
-}
-
-.title{
-    text-align: center;
-    padding: 10px;
-}
-
-.btn{
-   border-radius: 50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 5px;
-   width: 20px;
-   height: 20px;
-   border: none;
-   background-color: rgb(188, 187, 187);
-   color: white;
-   font-weight: bold;
-}
-
-.btn:hover{
-    color: red;
-    cursor: pointer;
-}
-
-li{
+.flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid black;
 }
 
-li:last-child{
-    border-bottom: none;
-    margin-bottom: 10px;
+.todosContainer {
+    width: 350px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
 
-.input, .submit{
-    padding: 10px;
+.topBorder {
+    border-top: 2px solid rgb(226, 226, 226);
 }
 
-.input{
-    width: 77.8%;
+.paddingHalf {
+    padding: 0.5rem;
 }
 
-.submit{
-    width: 20%;
-    margin-left: 10px;
+.textCenter {
+    text-align: center;
 }
 
-.submit:hover{
-    font-weight: bold;
-    cursor: pointer;
+input {    
+    border: lightgray solid 1px;
+    margin-left: 0.5rem;
+    width: 70%;
+}
+
+button {
+    background-color: white;
+    border: lightgray solid 1px;
+    padding: 0.5rem;
+    float: right;
+    margin-right: 0.5rem;
+}
+
+button:hover {
+    background-color: lightgrey;
+}
+
+.icon {
+    padding-right: 0.5rem;
+}
+
+.inputDiv {
+    padding-top: 0.7rem;
 }

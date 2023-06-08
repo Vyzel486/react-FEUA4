@@ -1,0 +1,9 @@
+.user{
+    background-image: url("../../components/images/Mountain.jpeg");
+}
+
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
