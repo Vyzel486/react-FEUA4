@@ -1,8 +1,9 @@
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import { LOGIN_ROUTE } from "../routes/const";
 import { checkUserCredentials } from "../utils/user";
+import { getUsers, createUser, updateUser } from "../api/projects";
 
 const UserContext = createContext({
   user: null,
@@ -21,9 +22,7 @@ const UserProvider = ({ children }) => {
   // !!{email: "test", password: "asd123"} => true
 
   const handleLogin = (user, setError) => {
-    axios
-      .get("http://localhost:3000/users")
-      .then((resp) => resp.data)
+    getUsers()
       .then((response) => {
         const existingUser = checkUserCredentials(response, user);
         if (existingUser) {
@@ -45,8 +44,7 @@ const UserProvider = ({ children }) => {
   };
 
   const handleRegister = (newUser) => {
-    axios
-      .post("http://localhost:3000/users", newUser)
+    createUser(newUser)
       .then(() => {
         navigate(LOGIN_ROUTE);
       })
@@ -56,9 +54,7 @@ const UserProvider = ({ children }) => {
   };
 
   const handleUpdateUser = (updatingUser) => {
-    axios
-      .put(`http://localhost:3000/users/${user.id}`, updatingUser)
-      .then((resp) => resp.data)
+    updateUser(user.id, updatingUser)
       .then((response) => {
         setUser(response);
         localStorage.setItem("user", JSON.stringify(response));

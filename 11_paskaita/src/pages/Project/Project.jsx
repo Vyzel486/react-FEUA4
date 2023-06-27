@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import { getProject } from "../../api/projects";
+import ProjectGeneralInfo from "./ProjectGeneralInfo/ProjectGeneralInfo.jsx";
+import ProjectActions from "./ProjectAction/ProjectActions";
 
 const Project = () => {
   const { id } = useParams();
@@ -30,7 +32,12 @@ const Project = () => {
     return <div>Project not found</div>;
   }
 
-  return <div>{project.title}</div>;
+  return (
+    <div>
+      <ProjectActions id={project.id} />
+      <ProjectGeneralInfo project={project} />
+    </div>
+  );
 };
 
 export default Project;

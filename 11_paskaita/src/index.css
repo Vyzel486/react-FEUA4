@@ -18,16 +18,15 @@ code {
   box-sizing: border-box;
 }
 
-.main-container,
-.contacts-container,
-.profile-container {
+html {
   width: 100vw;
   height: 100vh;
+  background-image: url("./styles/images/hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 0;
   z-index: -1;
 }

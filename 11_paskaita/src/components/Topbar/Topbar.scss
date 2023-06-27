@@ -5,6 +5,8 @@
   padding: 2rem;
   background-color: black;
   color: white;
+  width: 100vw;
+  height: 60px;
 
   a {
     color: inherit;
@@ -21,5 +23,9 @@
     display: flex;
     align-items: center;
     gap: 3rem;
+  }
+
+  .logo {
+    width: 80px;
   }
 }

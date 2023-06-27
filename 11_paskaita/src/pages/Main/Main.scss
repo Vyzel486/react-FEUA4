@@ -1,5 +1,27 @@
-@import "../../styles/background.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Ysabeau+SC&display=swap");
 
 .main-container {
-  background-image: $background;
+  margin: 3rem 0 0 4rem;
+  color: white;
+
+  h1 {
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 3rem;
+    width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .since {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-family: "Ysabeau SC", sans-serif;
+
+    hr {
+      border: 3px solid rgb(189, 189, 37);
+      width: 150px;
+      height: 3px;
+      margin-left: 1rem;
+    }
+  }
 }

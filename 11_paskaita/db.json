@@ -31,64 +31,46 @@
       "email": "bronius@gmail.com",
       "password": "bronius",
       "id": 4
+    },
+    {
+      "name": "Tadas",
+      "surname": "Tadukas",
+      "date": "1993-02-01",
+      "email": "tadas@gmail.com",
+      "password": "tadas",
+      "id": 5
+    },
+    {
+      "name": "Kęstas",
+      "surname": "Kestutavičius",
+      "date": "1983-05-04",
+      "email": "kestas@gmail.com",
+      "password": "kestas123",
+      "id": 6
     }
   ],
   "projects": [
     {
       "id": 1,
-      "userId": 1,
+      "userId": 2,
       "title": "Reconstruction of the administration building in Vilnius",
       "description": "Reconstruction work of an administration building located at T. Ševčenkos Street 13, Vilnius, was performed. Main work: dismantling of floors, reinforced concrete structures, masonry walls, and openings. Demolition work of one part of the building, removal of construction scrap, and preparation of the territory for construction work.",
       "imageUrl": "https://mlg8ncvavrmb.i.optimole.com/4skBQHY-iJvA3T7A/w:2000/h:1500/q:mauto/f:avif/https://bdt.lt/wp-content/uploads/2021/07/8_T.Svecenkos-g.-5.jpg",
       "client": "Merko statyba, UAB",
-      "startingDate": "2023-06-14T15:33:46Z",
-      "endingDate": "2024-06-14T15:33:46Z",
-      "people": [
-        {
-          "name": "Rokas",
-          "surname": "Broniukas",
-          "position": "Engineer"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "title": "Vilnius stadium",
-      "description": "Reconstruction work of an administration building located at T. Ševčenkos Street 13, Vilnius, was performed. Main work: dismantling of floors, reinforced concrete structures, masonry walls, and openings. Demolition work of one part of the building, removal of construction scrap, and preparation of the territory for construction work.",
-      "imageUrl": "https://www.lrt.lt/img/2022/08/29/1331261-944016-756x425.jpg",
-      "client": "Merko statyba, UAB",
-      "startingDate": "2023-06-14T15:33:46Z",
-      "endingDate": "2024-06-14T15:33:46Z",
-      "people": [
-        {
-          "name": "Rokas",
-          "surname": "Broniukas",
-          "position": "Engineer"
-        }
-      ]
-    },
-    {
-      "userId": 1,
-      "title": "TEst",
-      "description": "testukas",
-      "imageUrl": "https://media.lrytas.lt/images/2022/05/25/064816207-cb6395cc-5c07-4607-aaa2-ce5373f5c463.jpg",
-      "client": "Testavicius",
-      "startingDate": "2012-12-12",
-      "endingDate": "2012-02-12",
-      "people": [],
-      "id": 3
+      "startingDate": "2023-06-14",
+      "endingDate": "2024-06-14",
+      "people": []
     },
     {
       "userId": 2,
-      "title": "National stadium gets construction permit in Vilnius",
-      "description": "A permit has been granted for the construction of a national stadium in Vilnius’ Šeškinė area, according to the information system Infostatyba. ",
-      "imageUrl": "https://www.lrt.lt/img/2022/12/28/1416626-90425-756x425.jpg",
-      "client": "Tadas",
-      "startingDate": "2022-05-12",
-      "endingDate": "2023-05-12",
+      "title": "Artery business centre construction reaches an important milestone: the installation of a unique facade in the Baltic States has started",
+      "description": "The Artery business centre, designed by world-renowned architect Daniel Libeskind (New York, USA), is beginning to take shape in the central business district of Vilnius – Konstitucijos Avenue. Most of the monolithic reinforced concrete structures have already been erected since the start of the project, and now, beautification works have begun on the 20-storey complex with facades that require exceptional technological solutions. This is another important milestone in the development of this business centre, which is attracting the attention not only of a growing number of ordinary Vilnius residents but also of leading Lithuanian and international companies.",
+      "imageUrl": "https://media.lrytas.lt/images/2022/05/25/064816207-cb6395cc-5c07-4607-aaa2-ce5373f5c463.jpg",
+      "client": "Robotex, the SBA Group company",
+      "startingDate": "2023-04-12",
+      "endingDate": "2026-07-22",
       "people": [],
-      "id": 4
+      "id": 2
     }
   ]
 }
