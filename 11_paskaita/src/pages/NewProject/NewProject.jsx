@@ -15,6 +15,7 @@ const NewProject = ({ project }) => {
   const [description, setDescription] = useState(project?.description || "");
   const [imageUrl, setImageUrl] = useState(project?.imageUrl || "");
   const [client, setClient] = useState(project?.client || "");
+
   const [startingDate, setStartingDate] = useState(
     project?.startingDate ? formatDate(project.startingDate) : ""
   );
