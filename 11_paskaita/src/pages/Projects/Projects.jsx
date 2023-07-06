@@ -26,18 +26,17 @@ const Projects = () => {
 
   return (
     <div className="projects">
+      <div className="new-project-button">
+        <Link to={NEW_PROJECT_ROUTE}>
+          <Button>Create New Project</Button>
+        </Link>
+      </div>
       {isLoading ? (
         <Loader />
       ) : projects.length === 0 ? (
         <div>There are no projects yet.</div>
       ) : (
         <>
-          <div className="new-project-button">
-            <Link to={NEW_PROJECT_ROUTE}>
-              <Button>Create New Project</Button>
-            </Link>
-          </div>
-
           <div className="all-projects">
             {projects.map((project) => (
               <Link
