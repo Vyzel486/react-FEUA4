@@ -19,9 +19,11 @@ const NewProject = ({ project }) => {
   const [startingDate, setStartingDate] = useState(
     project?.startingDate ? formatDate(project.startingDate) : ""
   );
+
   const [endingDate, setEndingDate] = useState(
     project?.endingDate ? formatDate(project.endingDate) : ""
   );
+
   const people = [];
   const isEditing = !!project;
 

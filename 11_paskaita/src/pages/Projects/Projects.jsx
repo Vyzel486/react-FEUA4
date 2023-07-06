@@ -4,6 +4,7 @@ import { getProjects } from "../../api/projects";
 import ProjectCard from "./ProjectCard";
 import { PROJECT_ROUTE, NEW_PROJECT_ROUTE } from "../../routes/const";
 import Button from "../../components/Button/Button";
+import Loader from "../../components/Loader/Loader";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -23,31 +24,35 @@ const Projects = () => {
       });
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (projects.length === 0) {
-    return <div>There are no projects yet.</div>;
-  }
-
   return (
     <div className="projects">
-      <div className="new-project-button">
-        <Link to={NEW_PROJECT_ROUTE}>
-          <Button>Create New Project</Button>
-        </Link>
-      </div>
-      <div className="all-projects">
-        {projects.map((project) => (
-          <Link
-            key={project.id}
-            to={generatePath(PROJECT_ROUTE, { id: project.id })} // generatePath tik tada kai naudojam dinaminius routus
-          >
-            <ProjectCard title={project.title} imageUrl={project.imageUrl} />
-          </Link>
-        ))}
-      </div>
+      {isLoading ? (
+        <Loader />
+      ) : projects.length === 0 ? (
+        <div>There are no projects yet.</div>
+      ) : (
+        <>
+          <div className="new-project-button">
+            <Link to={NEW_PROJECT_ROUTE}>
+              <Button>Create New Project</Button>
+            </Link>
+          </div>
+
+          <div className="all-projects">
+            {projects.map((project) => (
+              <Link
+                key={project.id}
+                to={generatePath(PROJECT_ROUTE, { id: project.id })}
+              >
+                <ProjectCard
+                  title={project.title}
+                  imageUrl={project.imageUrl}
+                />
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
